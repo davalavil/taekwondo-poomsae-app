@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poomsae Taekwondo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Biblioteca de Poomsae Taekwondo</h1>
+
+    <section id="federation-selection">
+        <h2>Elige la Federación</h2>
+        <button data-federation="wtf">World Taekwondo (WTF)</button>
+        <button data-federation="itf">ITF</button>
+    </section>
+
+    <section id="belt-selection" class="hidden">
+        <h2 id="belt-title"></h2>
+        <div id="belt-list">
+            <!-- Los botones de cinturón se generarán aquí con JS -->
+        </div>
+        <button id="back-to-federation">Volver</button>
+    </section>
+
+    <section id="poomsae-selection" class="hidden">
+        <h2 id="poomsae-title"></h2>
+        <div id="poomsae-list">
+            <!-- Los enlaces de Poomsae se generarán aquí con JS -->
+        </div>
+        <button id="back-to-belts">Volver</button>
+    </section>
+
+    <section id="video-player" class="hidden">
+        <h3 id="video-title"></h3>
+        <div id="player-container">
+            <!-- El iframe del vídeo se insertará aquí con JS -->
+        </div>
+        <button id="close-video">Cerrar Vídeo</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
