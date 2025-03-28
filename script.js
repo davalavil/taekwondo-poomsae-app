@@ -5,8 +5,8 @@ const poomsaeData = {
             { name: "Taegeuk Il Jang (1)", videoId: "https://youtu.be/OyWBx5lTZZI" }
         ],
         "Verde": [
-            { name: "Taegeuk Ee Jang (2)", videoId: "YOUR_YOUTUBE_ID_2" },
-            { name: "Taegeuk Sam Jang (3)", videoId: "YOUR_YOUTUBE_ID_3" }
+            { name: "Taegeuk Ee Jang (2)", videoId: "https://www.youtube.com/watch?v=FSB8m0zdAEo" },
+            { name: "Taegeuk Sam Jang (3)", videoId: "https://www.youtube.com/watch?v=syTX0igty04" }
         ],
         "Azul": [
             { name: "Taegeuk Sa Jang (4)", videoId: "YOUR_YOUTUBE_ID_4" },
