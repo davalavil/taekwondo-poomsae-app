@@ -4,105 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guía de Formas Taekwondo</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css"> <!-- Asegúrate que la ruta es correcta -->
 </head>
 <body>
 
-    <h1>Guía de Formas de Taekwondo</h1>
+    <h1>Guía de Formas y Ejercicios de Taekwondo</h1>
 
-    <!-- Contenedor para mostrar el vídeo -->
+    <!-- Contenedor para mostrar el vídeo (Modal) -->
     <div id="video-player-container" class="hidden">
         <button id="close-video">X Cerrar</button>
         <div id="video-player">
-            <!-- El iframe de YouTube se insertará aquí -->
+            <!-- El iframe de YouTube se insertará aquí por JavaScript -->
         </div>
     </div>
 
-    <div class="styles-container">
-        <!-- Sección WTF -->
-        <section id="wtf">
-            <h2>World Taekwondo (WTF / Kukkiwon)</h2>
+    <!-- Contenedor principal para los cinturones -->
+    <div class="belt-container">
 
-            <div class="belt-group">
-                <h3>Cinturón Blanco / Amarillo</h3>
-                <ul>
-                    <li><button class="video-trigger" data-video-id="9Pd7dvz1mtQ">Kicho I</button></li>
-                    <li><button class="video-trigger" data-video-id="DrgmLQKj5OQ">Kicho II </button></li>
-                    <li><button class="video-trigger" data-video-id="ID_VIDEO_KICHO_3">Kicho Sam Jang</button></li>
-                    <li><button class="video-trigger" data-video-id="9Pd7dvz1mtQ">Taegeuk Il Jang (1)</button></li>
-                    <li><button class="video-trigger" data-video-id="FSB8m0zdAEo">Taegeuk I Jang (2)</button></li>
-                </ul>
-            </div>
-
-            <div class="belt-group">
-                <h3>Cinturón Naranja / Verde</h3>
-                <ul>
-                    <li><button class="video-trigger" data-video-id="ID_VIDEO_TAEGEUK_3">Taegeuk Sam Jang (3)</button></li>
-                    <li><button class="video-trigger" data-video-id="ID_VIDEO_TAEGEUK_4">Taegeuk Sa Jang (4)</button></li>
-                </ul>
-            </div>
-
-            <div class="belt-group">
-                <h3>Cinturón Azul</h3>
-                <ul>
-                    <li><button class="video-trigger" data-video-id="ID_VIDEO_TAEGEUK_5">Taegeuk Oh Jang (5)</button></li>
-                    <li><button class="video-trigger" data-video-id="ID_VIDEO_TAEGEUK_6">Taegeuk Yuk Jang (6)</button></li>
-                </ul>
-            </div>
-
-            <div class="belt-group">
-                <h3>Cinturón Rojo</h3>
-                <ul>
-                    <li><button class="video-trigger" data-video-id="ID_VIDEO_TAEGEUK_7">Taegeuk Chil Jang (7)</button></li>
-                    <li><button class="video-trigger" data-video-id="ID_VIDEO_TAEGEUK_8">Taegeuk Pal Jang (8)</button></li>
-                </ul>
-            </div>
-            <!-- Agrega más cinturones/formas si es necesario -->
+        <!-- Cinturón Blanco -->
+        <section class="belt-group">
+            <h3>Cinturón Blanco</h3>
+            <h4>WTF (World Taekwondo)</h4>
+            <ul>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_TAEGEUK_2">Taeguk I Chang (2)</button></li>
+                <!-- Nota: Confirmar si es correcto que II Chang (2) sea para blanco -->
+            </ul>
+            <h4>ITF (International Taekwon-Do Federation)</h4>
+            <ul>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_CHON_JI">Chon-Ji (Saju Jirugi/Makgi pueden ir antes)</button></li>
+                <!-- Podrías añadir Saju Jirugi y Saju Makgi aquí si encuentras videos -->
+                <!-- <li><button class="video-trigger" data-video-id="ID_VIDEO_SAJU_JIRUGI">Saju Jirugi</button></li> -->
+                <!-- <li><button class="video-trigger" data-video-id="ID_VIDEO_SAJU_MAKGI">Saju Makgi</button></li> -->
+            </ul>
         </section>
 
-        <!-- Sección ITF -->
-        <section id="itf">
-            <h2>International Taekwon-Do Federation (ITF)</h2>
-
-             <div class="belt-group">
-                <h3>Cinturón Blanco / Amarillo (9º y 8º Gup)</h3>
-                <ul>
-                    <li><button class="video-trigger" data-video-id="ID_VIDEO_SAJU_JIRUGI">Saju Jirugi</button></li>
-                    <li><button class="video-trigger" data-video-id="ID_VIDEO_SAJU_MAKGI">Saju Makgi</button></li>
-                    <li><button class="video-trigger" data-video-id="ID_VIDEO_CHON_JI">Chon-Ji</button></li>
-                </ul>
-            </div>
-
-             <div class="belt-group">
-                <h3>Cinturón Naranja / Verde (7º y 6º Gup)</h3>
-                <ul>
-                     <li><button class="video-trigger" data-video-id="ID_VIDEO_DAN_GUN">Dan-Gun</button></li>
-                     <li><button class="video-trigger" data-video-id="ID_VIDEO_DO_SAN">Do-San</button></li>
-                </ul>
-            </div>
-
-             <div class="belt-group">
-                <h3>Cinturón Azul (5º y 4º Gup)</h3>
-                <ul>
-                     <li><button class="video-trigger" data-video-id="ID_VIDEO_WON_HYO">Won-Hyo</button></li>
-                     <li><button class="video-trigger" data-video-id="ID_VIDEO_YUL_GOK">Yul-Gok</button></li>
-                </ul>
-            </div>
-
-             <div class="belt-group">
-                <h3>Cinturón Rojo (3º y 2º Gup)</h3>
-                <ul>
-                     <li><button class="video-trigger" data-video-id="ID_VIDEO_JOONG_GUN">Joong-Gun</button></li>
-                     <li><button class="video-trigger" data-video-id="ID_VIDEO_TOI_GYE">Toi-Gye</button></li>
-                     <!-- Nota: Hwa-Rang suele ser para 1er Gup (Rojo punta negra) -->
-                     <li><button class="video-trigger" data-video-id="ID_VIDEO_HWA_RANG">Hwa-Rang</button></li>
-                </ul>
-            </div>
-            <!-- Agrega más cinturones/formas si es necesario -->
-
+        <!-- Cinturón Amarillo -->
+        <section class="belt-group">
+            <h3>Cinturón Amarillo</h3>
+            <h4>WTF (World Taekwondo)</h4>
+            <ul>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_TAEGEUK_1">Taeguk Il Jang (1)</button></li>
+                 <!-- Nota: Confirmar si es correcto que I Chang (1) sea para amarillo después de II Chang -->
+            </ul>
+            <h4>ITF (International Taekwon-Do Federation)</h4>
+            <ul>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_DAN_GUN">Dan-Gun</button></li>
+            </ul>
+            <h4>Kicho</h4>
+            <ul>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_KICHO_1">Kicho 1</button></li>
+            </ul>
+            <h4>Samboderiang (Combate a 3 pasos)</h4>
+            <ul>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_SAMBO_1">Samboderiang 1</button></li>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_SAMBO_2">Samboderiang 2</button></li>
+            </ul>
         </section>
-    </div>
 
-    <script src="js/script.js"></script>
+        <!-- Cinturón Naranja -->
+        <section class="belt-group">
+            <h3>Cinturón Naranja</h3>
+            <h4>WTF (World Taekwondo)</h4>
+            <ul>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_TAEGEUK_3">Taeguk Sam Jang (3)</button></li>
+            </ul>
+            <h4>ITF (International Taekwon-Do Federation)</h4>
+            <ul>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_DO_SAN">Do-San</button></li>
+            </ul>
+            <h4>Samboderiang (Combate a 3 pasos)</h4>
+            <ul>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_SAMBO_3">Samboderiang 3</button></li>
+            </ul>
+        </section>
+
+        <!-- Cinturón Verde -->
+        <section class="belt-group">
+            <h3>Cinturón Verde</h3>
+            <h4>WTF (World Taekwondo)</h4>
+            <ul>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_TAEGEUK_4">Taeguk Sa Jang (4)</button></li>
+            </ul>
+            <h4>ITF (International Taekwon-Do Federation)</h4>
+            <ul>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_WON_HYO">Won-Hyo</button></li>
+            </ul>
+            <h4>Kicho</h4>
+            <ul>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_KICHO_2">Kicho 2</button></li>
+            </ul>
+            <h4>Samboderiang (Combate a 3 pasos)</h4>
+            <ul>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_SAMBO_4">Samboderiang 4</button></li>
+            </ul>
+        </section>
+
+        <!-- Cinturón Azul -->
+        <section class="belt-group">
+            <h3>Cinturón Azul</h3>
+            <h4>WTF (World Taekwondo)</h4>
+            <ul>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_TAEGEUK_5">Taeguk Oh Jang (5)</button></li>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_TAEGEUK_6">Taeguk Yuk Jang (6)</button></li>
+            </ul>
+            <h4>ITF (International Taekwon-Do Federation)</h4>
+            <ul>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_YUL_GOK">Yul-Gok</button></li>
+            </ul>
+            <h4>Samboderiang (Combate a 3 pasos)</h4>
+            <ul>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_SAMBO_5">Samboderiang 5</button></li>
+            </ul>
+        </section>
+
+        <!-- Cinturón Rojo -->
+        <section class="belt-group">
+            <h3>Cinturón Rojo</h3>
+            <h4>WTF (World Taekwondo)</h4>
+            <ul>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_TAEGEUK_7">Taeguk Chil Jang (7)</button></li>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_TAEGEUK_8">Taeguk Pal Jang (8)</button></li>
+            </ul>
+             <!-- Nota: No has listado Tul de ITF para rojo (ej. Joong-Gun, Toi-Gye, Hwa-Rang). Puedes añadirlos si lo necesitas -->
+            <!--
+            <h4>ITF (International Taekwon-Do Federation)</h4>
+            <ul>
+                 <li><button class="video-trigger" data-video-id="ID_VIDEO_JOONG_GUN">Joong-Gun</button></li>
+                 <li><button class="video-trigger" data-video-id="ID_VIDEO_TOI_GYE">Toi-Gye</button></li>
+                 <li><button class="video-trigger" data-video-id="ID_VIDEO_HWA_RANG">Hwa-Rang</button></li>
+            </ul>
+             -->
+            <h4>Kicho</h4>
+            <ul>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_KICHO_3">Kicho 3</button></li>
+            </ul>
+            <h4>Samboderiang (Combate a 3 pasos)</h4>
+            <ul>
+                <li><button class="video-trigger" data-video-id="ID_VIDEO_SAMBO_6">Samboderiang 6</button></li>
+            </ul>
+        </section>
+
+    </div> <!-- Fin de belt-container -->
+
+    <script src="js/script.js"></script> <!-- Asegúrate que la ruta es correcta -->
 </body>
 </html>
