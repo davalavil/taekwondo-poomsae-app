@@ -2,7 +2,7 @@ const poomsaeData = {
     wtf: {
         "Blanco": [], // O quizás formas básicas
         "Amarillo": [
-            { name: "Taegeuk Il Jang (1)", videoId: "YOUR_YOUTUBE_ID_1" }
+            { name: "Taegeuk Il Jang (1)", videoId: "https://youtu.be/OyWBx5lTZZI" }
         ],
         "Verde": [
             { name: "Taegeuk Ee Jang (2)", videoId: "YOUR_YOUTUBE_ID_2" },
