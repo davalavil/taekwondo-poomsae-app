@@ -1,53 +1,134 @@
-/* Estilos básicos */
-body { font-family: sans-serif; padding: 20px; }
-h1, h2, h3 { text-align: center; }
-button { padding: 10px 15px; margin: 5px; cursor: pointer; }
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
 
-/* Clases de utilidad */
-.hidden { display: none; }
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
 
-/* Estilos específicos */
-#federation-selection, #belt-selection, #poomsae-selection {
+.styles-container {
+    display: flex; /* Organiza secciones WTF e ITF lado a lado */
+    flex-wrap: wrap; /* Permite que pasen abajo en pantallas pequeñas */
+    gap: 30px; /* Espacio entre secciones */
+    justify-content: center; /* Centra las secciones si hay espacio */
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    flex: 1; /* Hace que las secciones intenten ocupar el mismo espacio */
+    min-width: 300px; /* Ancho mínimo antes de envolver */
 }
 
-#belt-list, #poomsae-list {
-    display: flex;
-    flex-wrap: wrap; /* Para que los botones se ajusten */
-    gap: 10px; /* Espacio entre botones */
-    justify-content: center;
-}
-
-#video-player {
-    margin-top: 20px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f0f0f0;
-}
-
-#player-container {
-    position: relative;
-    padding-bottom: 56.25%; /* Proporción 16:9 */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    background: #000;
+h2 {
+    color: #0056b3; /* Azul oscuro */
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 5px;
     margin-bottom: 15px;
 }
 
-#player-container iframe {
+h3 {
+    color: #555;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+.video-trigger {
+    background-color: #007bff; /* Azul */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Opcional: hacer botones de ancho completo */
+    text-align: left; /* Alinear texto a la izquierda si son anchos */
+}
+
+.video-trigger:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}
+
+/* Estilos para el reproductor de vídeo modal */
+#video-player-container {
+    position: fixed; /* Fijo en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegura que esté por encima de todo */
+}
+
+#video-player-container.hidden {
+    display: none; /* Oculto por defecto */
+}
+
+#video-player {
+    position: relative;
+    width: 80%; /* Ancho del vídeo */
+    max-width: 800px; /* Ancho máximo */
+    /* Proporción 16:9 para el vídeo */
+    padding-bottom: 45%; /* (9 / 16 * 80%) si width es 80% */
+    height: 0;
+    background-color: black;
+}
+
+#video-player iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    border: none;
 }
 
-/* Añadir estilos responsivos si es necesario */
-@media (max-width: 600px) {
-    /* Ajustes para pantallas pequeñas */
+#close-video {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #dc3545; /* Rojo */
+    color: white;
+    border: none;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1001; /* Encima del vídeo */
 }
+
+ #close-video:hover {
+    background-color: #c82333; /* Rojo más oscuro */
+}
+
+/* Media Query para pantallas pequeñas */
+ @media (max-width: 768px) {
+    .styles-container {
+        flex-direction: column; /* Apila las secciones verticalmente */
+    }
+    #video-player {
+         width: 95%;
+         padding-bottom: 53.4375%; /* 9 / 16 * 95% */
+    }
+ }
