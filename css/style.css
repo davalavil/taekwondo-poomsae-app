@@ -1,6 +1,8 @@
+/* === ESTILOS GENERALES === */
 body {
     font-family: sans-serif;
-    margin: 20px;
+    margin: 0; /* Quitar margen por defecto */
+    padding: 0; /* Quitar padding por defecto */
     background-color: #f4f4f4;
     line-height: 1.6;
 }
@@ -8,91 +10,172 @@ body {
 h1 {
     text-align: center;
     color: #333;
+    margin-top: 20px;
     margin-bottom: 30px;
 }
 
-.styles-container {
-    display: flex; /* Organiza secciones WTF e ITF lado a lado */
-    flex-wrap: wrap; /* Permite que pasen abajo en pantallas pequeñas */
-    gap: 30px; /* Espacio entre secciones */
-    justify-content: center; /* Centra las secciones si hay espacio */
+/* Contenedor general para centrar los grupos de cinturones */
+.belt-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-section {
-    background-color: #fff;
+/* Estilo base para cada grupo de cinturón */
+.belt-group {
+    /* background-color: #fff; Quitamos el fondo blanco por defecto */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-    flex: 1; /* Hace que las secciones intenten ocupar el mismo espacio */
-    min-width: 300px; /* Ancho mínimo antes de envolver */
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
 }
 
-h2 {
-    color: #0056b3; /* Azul oscuro */
-    border-bottom: 2px solid #0056b3;
-    padding-bottom: 5px;
+/* Título de cada cinturón */
+.belt-group h3 {
+    /* color: #555; El color se definirá por cinturón */
+    margin-top: 0; /* Quitar margen superior si es el primer elemento */
     margin-bottom: 15px;
+    font-size: 1.5em;
 }
 
-h3 {
-    color: #555;
+/* Subtítulos (WTF, ITF, Kicho, etc.) */
+.belt-group h4 {
+    /* color: #666; El color se definirá por cinturón */
     margin-top: 20px;
     margin-bottom: 10px;
+    font-size: 1em; /* Ajustado tamaño */
+    text-transform: uppercase;
+    border-bottom: 1px solid #eee; /* Línea sutil debajo, se ajustará por color */
+    padding-bottom: 5px;
 }
 
-ul {
+.belt-group ul {
     list-style: none;
     padding: 0;
+    margin-top: 10px; /* Espacio después del h4 */
+    margin-bottom: 10px; /* Espacio antes del siguiente h4 */
 }
 
-li {
+.belt-group li {
     margin-bottom: 8px;
 }
 
+/* === ESTILOS DE BOTONES === */
 .video-trigger {
-    background-color: #007bff; /* Azul */
-    color: white;
-    border: none;
+    background-color: #007bff; /* Azul del botón */
+    color: white !important; /* Forzar texto blanco en el botón */
+    border: 1px solid #0069d9; /* Borde sutil */
     padding: 8px 15px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
-    transition: background-color 0.3s ease;
-    width: 100%; /* Opcional: hacer botones de ancho completo */
-    text-align: left; /* Alinear texto a la izquierda si son anchos */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    text-align: left; /* Alinear texto a la izquierda */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
 }
 
 .video-trigger:hover {
-    background-color: #0056b3; /* Azul más oscuro */
+    background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+    border-color: #0056b3;
 }
 
-/* Estilos para el reproductor de vídeo modal */
+/* === ESTILOS DE FONDO POR CINTURÓN === */
+
+.belt-white {
+    background-color: #ffffff;
+    color: #333; /* Texto oscuro */
+}
+.belt-white h3,
+.belt-white h4 {
+    color: #333;
+    border-bottom-color: #eee; /* Borde claro para h4 */
+}
+
+
+.belt-yellow {
+    background-color: #ffeb3b; /* Amarillo brillante */
+    color: #333; /* Texto oscuro */
+}
+.belt-yellow h3,
+.belt-yellow h4 {
+    color: #333;
+    border-bottom-color: rgba(0, 0, 0, 0.1); /* Borde oscuro tenue para h4 */
+}
+
+
+.belt-orange {
+    background-color: #ff9800; /* Naranja */
+    color: #333; /* Texto oscuro */
+}
+.belt-orange h3,
+.belt-orange h4 {
+    color: #333;
+     border-bottom-color: rgba(0, 0, 0, 0.1); /* Borde oscuro tenue para h4 */
+}
+
+
+.belt-green {
+    background-color: #4caf50; /* Verde */
+    color: #ffffff; /* Texto blanco */
+}
+.belt-green h3,
+.belt-green h4 {
+    color: #ffffff;
+    border-bottom-color: rgba(255, 255, 255, 0.3); /* Borde blanco tenue para h4 */
+}
+
+
+.belt-blue {
+    background-color: #2196f3; /* Azul */
+    color: #ffffff; /* Texto blanco */
+}
+.belt-blue h3,
+.belt-blue h4 {
+    color: #ffffff;
+     border-bottom-color: rgba(255, 255, 255, 0.3); /* Borde blanco tenue para h4 */
+}
+
+
+.belt-red {
+    background-color: #f44336; /* Rojo */
+    color: #ffffff; /* Texto blanco */
+}
+.belt-red h3,
+.belt-red h4 {
+    color: #ffffff;
+     border-bottom-color: rgba(255, 255, 255, 0.3); /* Borde blanco tenue para h4 */
+}
+
+
+/* === ESTILOS PARA EL REPRODUCTOR DE VÍDEO (MODAL) === */
 #video-player-container {
-    position: fixed; /* Fijo en la pantalla */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+    background-color: rgba(0, 0, 0, 0.85); /* Fondo oscuro más opaco */
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000; /* Asegura que esté por encima de todo */
+    z-index: 1000;
+    padding: 20px; /* Añadir padding para que el vídeo no toque los bordes en pantallas pequeñas */
+    box-sizing: border-box;
 }
 
 #video-player-container.hidden {
-    display: none; /* Oculto por defecto */
+    display: none;
 }
 
 #video-player {
     position: relative;
-    width: 80%; /* Ancho del vídeo */
-    max-width: 800px; /* Ancho máximo */
-    /* Proporción 16:9 para el vídeo */
-    padding-bottom: 45%; /* (9 / 16 * 80%) si width es 80% */
+    width: 90%; /* Ajustar ancho del vídeo */
+    max-width: 854px; /* Ancho estándar de vídeo 16:9 */
     height: 0;
+    padding-bottom: 50.625%; /* Proporción 16:9 (9 / 16 * 90% si width es 90% -> 9/16 * 100% = 56.25% del ancho actual) */
     background-color: black;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
 #video-player iframe {
@@ -106,29 +189,45 @@ li {
 
 #close-video {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: #dc3545; /* Rojo */
+    top: 25px; /* Ajustar posición */
+    right: 25px; /* Ajustar posición */
+    background-color: #dc3545;
     color: white;
     border: none;
     font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1;
     padding: 10px 15px;
-    border-radius: 5px;
+    border-radius: 50%; /* Hacerlo circular */
     cursor: pointer;
-    z-index: 1001; /* Encima del vídeo */
+    z-index: 1001;
+    transition: background-color 0.3s ease;
 }
 
- #close-video:hover {
-    background-color: #c82333; /* Rojo más oscuro */
+#close-video:hover {
+    background-color: #c82333;
 }
 
-/* Media Query para pantallas pequeñas */
- @media (max-width: 768px) {
-    .styles-container {
-        flex-direction: column; /* Apila las secciones verticalmente */
+
+/* === RESPONSIVIDAD === */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em;
     }
+
+    .belt-group h3 {
+        font-size: 1.3em;
+    }
+
     #video-player {
-         width: 95%;
-         padding-bottom: 53.4375%; /* 9 / 16 * 95% */
+         width: 100%; /* Ocupar casi todo el ancho disponible */
+         padding-bottom: 56.25%; /* Mantener 16:9 */
     }
- }
+
+     #close-video {
+        top: 15px;
+        right: 15px;
+        font-size: 1em;
+        padding: 8px 12px;
+    }
+}
