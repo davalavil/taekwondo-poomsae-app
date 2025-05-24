@@ -1,23 +1,4 @@
-/* === MODERNIZED STYLES - Taekwondo App (Responsive Refined) === */
-
-/* === Import Google Font === */
-/* Asegúrate de añadir esto también a tu <head> en index.html:
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-*/
-
-/* === ESTILOS GENERALES (Base - Desktop First) === */
-body {
-    font-family: 'Poppins', sans-serif; /* Fuente moderna */
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa; /* Gris claro más moderno */
-    color: #495057; /* Color de texto base */
-    line-height: 1.7; /* Ligeramente más espacio entre líneas */
-    font-weight: 400; /* Peso normal */
-    -webkit-font-smoothing: antialiased; /* Mejor renderizado de fuentes en Webkit */
-    -moz-osx-font-smoothing: grayscale; /* Mejor renderizado de fuentes en Firefox */
+cale; /* Mejor renderizado de fuentes en Firefox */
 }
 
 h1 {
@@ -27,6 +8,7 @@ h1 {
     margin-bottom: 50px; /* Más espacio */
     font-weight: 700; /* Más peso */
     font-size: 2.2em; /* Tamaño base para desktop */
+    letter-spacing: 0.3px; /* Ajuste de espaciado */
 }
 
 /* Contenedor general para centrar los grupos de cinturones */
@@ -43,7 +25,7 @@ h1 {
     border-radius: 12px; /* Esquinas más redondeadas */
     margin-bottom: 35px; /* Separación entre tarjetas en desktop */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07); /* Sombra más suave y moderna */
-    border-top: 6px solid transparent; /* Espacio para el color del cinturón como acento */
+    /* border-top: 6px solid transparent; */ /* Comentado - Espacio para el color del cinturón como acento, ahora manejado por h3 bg */
     color: #343a40; /* Color de texto oscuro dentro de la tarjeta */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
@@ -58,9 +40,10 @@ h1 {
 .belt-group h3 {
     color: #212529; /* Color de título principal de tarjeta */
     margin-top: 0;
-    margin-bottom: 25px; /* Espacio después del título del cinturón */
+    margin-bottom: 15px; /* Ajustado para acomodar nuevo padding/bg en h3 específicos */
     font-size: 1.6em; /* Tamaño desktop */
     font-weight: 600;
+    letter-spacing: 0.2px; /* Ajuste de espaciado */
 }
 
 /* Subtítulos (WTF, ITF, Kicho, etc.) */
@@ -111,13 +94,44 @@ h1 {
 }
 
 /* === ACENTOS DE COLOR POR CINTURÓN (en border-top) === */
-.belt-white { border-top-color: #dcdcdc; } /* Un gris claro para blanco */
-.belt-yellow { border-top-color: #ffeb3b; }
-.belt-orange { border-top-color: #ff9800; }
-.belt-green { border-top-color: #4caf50; }
-.belt-blue { border-top-color: #2196f3; }
-.belt-red { border-top-color: #f44336; }
+/* .belt-white { border-top-color: #dcdcdc; } */ /* Comentado - Un gris claro para blanco */
+/* .belt-yellow { border-top-color: #ffeb3b; } */ /* Comentado */
+/* .belt-orange { border-top-color: #ff9800; } */ /* Comentado */
+/* .belt-green { border-top-color: #4caf50; } */  /* Comentado */
+/* .belt-blue { border-top-color: #2196f3; } */  /* Comentado */
+/* .belt-red { border-top-color: #f44336; } */   /* Comentado */
 
+/* === ESTILOS PARA TÍTULOS H3 CON FONDO DE COLOR === */
+.belt-white h3 {
+    background-color: #dcdcdc;
+    color: #000000;
+    padding: 10px 15px;
+}
+.belt-yellow h3 {
+    background-color: #ffeb3b;
+    color: #000000;
+    padding: 10px 15px;
+}
+.belt-orange h3 {
+    background-color: #ff9800;
+    color: #000000;
+    padding: 10px 15px;
+}
+.belt-green h3 {
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 10px 15px;
+}
+.belt-blue h3 {
+    background-color: #2196f3;
+    color: #ffffff;
+    padding: 10px 15px;
+}
+.belt-red h3 {
+    background-color: #f44336;
+    color: #ffffff;
+    padding: 10px 15px;
+}
 
 /* === ESTILOS PARA EL REPRODUCTOR DE VÍDEO (MODAL) === */
 #video-player-container {
